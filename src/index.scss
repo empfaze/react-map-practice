@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url(./assets/fonts/Lato-Regular.ttf) format("truetype");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 81.25em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+*:focus {
+  outline: 2px dashed grey;
+  outline-offset: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}

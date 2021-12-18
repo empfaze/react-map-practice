@@ -1,0 +1,37 @@
+.adress-list {
+  padding: 2rem 0;
+}
+
+.list-item {
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  cursor: grab;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.empty-text {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.delete-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.heading-secondary {
+  font-weight: normal;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
