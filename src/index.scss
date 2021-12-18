@@ -17,6 +17,14 @@ html {
   @media (max-width: 81.25em) {
     font-size: 50%;
   }
+
+  @media (max-width: 53.125em) {
+    font-size: 37.5%;
+  }
+
+  @media (max-width: 25em) {
+    font-size: 25%;
+  }
 }
 
 body {
