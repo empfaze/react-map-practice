@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-map-practice/static/css/main.ce6c3ea7.chunk.css",
+    "main.css": "/react-map-practice/static/css/main.bfe60a09.chunk.css",
     "main.js": "/react-map-practice/static/js/main.3515f656.chunk.js",
     "main.js.map": "/react-map-practice/static/js/main.3515f656.chunk.js.map",
     "runtime-main.js": "/react-map-practice/static/js/runtime-main.4e275ec5.js",
@@ -8,14 +8,14 @@
     "static/js/2.356b5b58.chunk.js": "/react-map-practice/static/js/2.356b5b58.chunk.js",
     "static/js/2.356b5b58.chunk.js.map": "/react-map-practice/static/js/2.356b5b58.chunk.js.map",
     "index.html": "/react-map-practice/index.html",
-    "static/css/main.ce6c3ea7.chunk.css.map": "/react-map-practice/static/css/main.ce6c3ea7.chunk.css.map",
+    "static/css/main.bfe60a09.chunk.css.map": "/react-map-practice/static/css/main.bfe60a09.chunk.css.map",
     "static/js/2.356b5b58.chunk.js.LICENSE.txt": "/react-map-practice/static/js/2.356b5b58.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/react-map-practice/static/media/Lato-Regular.9919edff.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.4e275ec5.js",
     "static/js/2.356b5b58.chunk.js",
-    "static/css/main.ce6c3ea7.chunk.css",
+    "static/css/main.bfe60a09.chunk.css",
     "static/js/main.3515f656.chunk.js"
   ]
 }
