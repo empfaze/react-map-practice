@@ -1,4 +1,4 @@
-import { DragEvent, FC } from "react";
+import { DragEvent, FC, KeyboardEvent } from "react";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 
 import DeleteIcon from "../../assets/images/delete.png";
@@ -17,6 +17,14 @@ const Adresslist: FC<AdresslistProps> = () => {
 
   function deleteHandler(placeId: number): void {
     removePlace(placeId);
+  }
+  function deleteHandlerWithKeyboard(
+    e: KeyboardEvent<HTMLImageElement>,
+    placeId: number
+  ): void {
+    if (e.key === "Enter") {
+      removePlace(placeId);
+    }
   }
 
   function dragStartHandler(
@@ -79,6 +87,7 @@ const Adresslist: FC<AdresslistProps> = () => {
 
               <img
                 onMouseDown={deleteHandler.bind(null, place.id)}
+                onKeyDown={(e) => deleteHandlerWithKeyboard(e, place.id)}
                 tabIndex={0}
                 src={DeleteIcon}
                 alt="Delete adress"

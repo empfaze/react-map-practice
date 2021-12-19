@@ -18,11 +18,24 @@ const adressSlice = createSlice({
 
     addPlace: (state, action: PayloadAction<IPlace>) => {
       state.places.push(action.payload);
+      localStorage.setItem("places", JSON.stringify(state.places));
     },
     removePlace: (state, action: PayloadAction<number>) => {
       state.places = state.places.filter(
         (place) => place.id !== action.payload
       );
+
+      const placesInLocalStorage = localStorage.getItem("places");
+      if (placesInLocalStorage) {
+        const placesArray: IPlace[] = JSON.parse(placesInLocalStorage);
+
+        if (placesArray.length > 0) {
+          const newArray = placesArray.filter(
+            (place) => place.id !== action.payload
+          );
+          localStorage.setItem("places", JSON.stringify(newArray));
+        }
+      }
     },
 
     setCurrentDraggedPlace: (state, action: PayloadAction<number | null>) => {
@@ -44,6 +57,8 @@ const adressSlice = createSlice({
           currentPlace.id = state.draggedPlaceID;
         }
       }
+
+      localStorage.setItem("places", JSON.stringify(state.places));
     },
   },
 });
