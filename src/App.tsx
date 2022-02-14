@@ -18,8 +18,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="heading-primary">Mapty Application</h1>
-      <div className="content-wrapper">
+      <h1 className="app__heading-primary">Mapty Application</h1>
+      <div className="app__main-wrapper main-wrapper">
         <Content />
         <Map />
       </div>

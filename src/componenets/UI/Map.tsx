@@ -17,10 +17,15 @@ const MapBasics: FC = () => {
     mapState = { center: [lastPlaceLng, lastPlaceLat], zoom: 10 };
   }
 
+  const mapStyle = {
+    width: "100%",
+    height: "100%",
+  };
+
   return (
     <YMaps>
       <div id="map" className={classes["map"]}>
-        <Map state={mapState} width={"50rem"} height={"50rem"}>
+        <Map state={mapState} style={mapStyle}>
           {places.length > 0 &&
             places.map((place, idx) => (
               <GeoObject

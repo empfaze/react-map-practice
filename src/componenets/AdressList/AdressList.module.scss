@@ -1,39 +1,83 @@
 .adress-list {
-  padding: 2rem 1rem;
+  width: 90%;
   overflow: auto;
   height: 35rem;
+  flex: 0 1 auto;
+
+  @media (max-width: 93.75em) {
+    width: 100%;
+  }
+
+  @media (max-width: 75em) {
+    height: 25rem;
+  }
 }
 
 .list-item {
-  font-size: 1.6rem;
-  padding: 1rem;
+  width: 95%;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.2rem 1.5rem;
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   cursor: grab;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.list-item:not(:last-child) {
-  margin-bottom: 1rem;
+
+  @media (max-width: 75em) {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    padding: 1rem 1.3rem;
+  }
+
+  @media (max-width: 25em) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1rem;
+  }
 }
 
 .empty-text {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   text-align: center;
+
+  @media (max-width: 25em) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
 }
 
 .delete-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
   cursor: pointer;
+
+  @media (max-width: 75em) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  @media (max-width: 25em) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .heading-secondary {
-  font-weight: normal;
-  font-size: 1.8rem;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
   text-align: center;
   margin-bottom: 2rem;
+
+  @media (max-width: 25em) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
 }

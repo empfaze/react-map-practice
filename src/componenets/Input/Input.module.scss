@@ -1,31 +1,62 @@
 .form-wrapper {
-  width: 40rem;
-  height: 11.3rem;
+  width: 100%;
+  height: 17rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 75em) {
+    height: 14rem;
+  }
 }
 
 .input {
+  width: 90%;
   display: grid;
-  grid-template-columns: max-content;
-  margin-bottom: 0.5rem;
+  grid-template-columns: 1fr;
+  margin: 2rem 0;
+
+  @media (max-width: 93.75em) {
+    width: 100%;
+  }
 }
 
 .input input {
-  font-size: 1.8rem;
-  padding: 1rem;
+  display: inline-block;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  padding: 1rem 1.5rem;
   border: 1px solid #000000;
   background-color: #ffffff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  width: 40rem;
-  margin-bottom: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  @media (max-width: 75em) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 25em) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
 }
 
 .input label {
-  font-size: 1.6rem;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media (max-width: 75em) {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 input.invalid {
@@ -33,10 +64,15 @@ input.invalid {
 }
 
 .input p {
-  font-size: 1.2rem;
-  text-align: left;
-  padding-left: 1rem;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-align: center;
   color: red;
+
+  @media (max-width: 75em) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 }
 
 .hidden {
@@ -51,21 +87,40 @@ input.invalid {
 }
 
 .error-para {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 25em) {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .error-btn {
-  font-size: 1.6rem;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
   border: none;
   border-bottom: 2px solid #000000;
   background-color: transparent;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s;
+
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 25em) {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
 }
 .error-btn:hover {
   background-color: #000000;
   color: white;
-  border-bottom: 2[x solid transparent];
+  border-bottom: 2px solid transparent;
 }

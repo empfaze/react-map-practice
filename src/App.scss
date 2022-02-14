@@ -1,49 +1,63 @@
 .app {
   width: 100%;
-  padding: 2rem;
-  height: 100vh;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+  height: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 81.25em) {
-    height: auto;
+  &__heading-primary {
+    font-weight: 700;
+    font-size: 4.8rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: skewY(2deg);
+      cursor: default;
+    }
+
+    @media (max-width: 37.5em) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 31.25em) {
+      font-size: 3.6rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 31.25em) {
+    padding: 1rem;
   }
 }
 
-.heading-primary {
-  font-size: 4.8rem;
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-  transition: all 0.3s;
+.main-wrapper {
+  width: 100%;
+  max-width: 150rem;
+  background-color: rgb(190, 187, 187);
 
-  @media (max-width: 81.25em) {
-    font-size: 3.6rem;
-  }
-}
-.heading-primary:hover {
-  transform: skewY(2deg);
-  cursor: default;
-}
-
-.content-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  grid-column-gap: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   padding: 5rem;
   border: 2px solid #000000;
 
-  @media (max-width: 81.25em) {
-    padding: 2.8rem;
+  @media (max-width: 93.75em) {
+    padding: 2rem;
   }
 
-  @media (max-width: 40.625em) {
-    grid-template-columns: max-content;
-    grid-template-rows: repeat(2, max-content);
-    grid-row-gap: 2rem;
-    justify-items: center;
+  @media (max-width: 53.125em) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 31.25em) {
+    padding: 1rem;
   }
 }
