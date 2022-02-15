@@ -23,13 +23,11 @@
   }
 
   @media (max-width: 59.375em) {
+    padding: 2rem;
     height: 35rem;
   }
 
-  @media (max-width: 53.125em) {
-    padding: 1rem 2rem;
-  }
   @media (max-width: 31.25em) {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
   }
 }

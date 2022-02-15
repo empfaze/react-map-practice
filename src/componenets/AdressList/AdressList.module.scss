@@ -1,7 +1,7 @@
 .adress-list {
   width: 90%;
   overflow: auto;
-  height: 35rem;
+  height: 42rem;
   flex: 0 1 auto;
 
   @media (max-width: 93.75em) {
@@ -9,7 +9,7 @@
   }
 
   @media (max-width: 75em) {
-    height: 25rem;
+    height: 28rem;
   }
 }
 
