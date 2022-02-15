@@ -44,44 +44,61 @@ const InputAdress: FC = () => {
     }
   }
 
-  async function searchHandler(
-    e: KeyboardEvent<HTMLInputElement>
-  ): Promise<void> {
+  function searchHandler() {
+    const request = adress.replaceAll(" ", "+");
+    sendRequest(request);
+    resetAndBlur();
+  }
+
+  function searchFromKeyboardHandler(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter" && isAdressValid) {
-      const request = adress.replaceAll(" ", "+");
-      sendRequest(request);
-      resetAndBlur();
+      searchHandler();
     }
   }
 
+  function searchFromButtonHandler() {
+    if (isAdressValid) searchHandler();
+  }
+
   const inputInvalid = hasError ? classes["invalid"] : "";
-  const paraIsVisible = hasError ? "" : classes["hidden"];
+  const paraIsVisible = hasError ? classes["form__para"] : classes["hidden"];
 
   return (
     <div className={classes["form-wrapper"]}>
       {isLoading && <Spinner />}
       {!isLoading && error && (
         <div className={classes["error-wrapper"]}>
-          <p className={classes["error-para"]}>Запрос неверный...</p>
+          <p className={classes["error-para"]}>{error}</p>
           <button onClick={resetError} className={classes["error-btn"]}>
             Повторить
           </button>
         </div>
       )}
       {!isLoading && !error && (
-        <div className={classes["input"]}>
-          <label htmlFor="adress">Введите корректный адрес:</label>
-          <input
-            className={inputInvalid}
-            type="text"
-            name="adress"
-            id="adress"
-            value={adress}
-            onChange={adressChangeHandler}
-            onBlur={adressBlurHandler}
-            onKeyDown={searchHandler}
-            placeholder="город Москва, улица Ленина, дом 2"
-          />
+        <div className={classes["form__content"]}>
+          <h2 className={classes["form__title"]}>Введите корректный адрес:</h2>
+          <div className={classes["form__manage-controls"]}>
+            <div className={classes["form__input"]}>
+              <label htmlFor="adress"></label>
+              <input
+                className={inputInvalid}
+                type="text"
+                name="adress"
+                id="adress"
+                value={adress}
+                onChange={adressChangeHandler}
+                onBlur={adressBlurHandler}
+                onKeyDown={searchFromKeyboardHandler}
+                placeholder="город Москва, улица Ленина, дом 2"
+              />
+            </div>
+            <button
+              className={classes["form__button"]}
+              onClick={searchFromButtonHandler}
+            >
+              Искать
+            </button>
+          </div>
           <p className={paraIsVisible}>Пожалуйста, введите корректный адрес</p>
         </div>
       )}

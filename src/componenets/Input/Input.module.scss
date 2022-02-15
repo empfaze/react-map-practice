@@ -1,61 +1,116 @@
 .form-wrapper {
   width: 100%;
-  height: 17rem;
+  min-height: 14rem;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   @media (max-width: 75em) {
-    height: 14rem;
+    min-height: 12rem;
   }
 }
 
-.input {
-  width: 90%;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 2rem 0;
-
-  @media (max-width: 93.75em) {
+.form {
+  &__content {
     width: 100%;
   }
-}
 
-.input input {
-  display: inline-block;
-  font-size: 2.2rem;
-  line-height: 2.6rem;
-  padding: 1rem 1.5rem;
-  border: 1px solid #000000;
-  background-color: #ffffff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  width: 100%;
-  margin-bottom: 1rem;
+  &__title {
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
 
-  @media (max-width: 75em) {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
+    @media (max-width: 75em) {
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
-  @media (max-width: 25em) {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+  &__manage-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 1rem;
   }
-}
 
-.input label {
-  font-weight: 700;
-  font-size: 2.6rem;
-  line-height: 3rem;
-  margin-bottom: 2rem;
-  text-align: center;
-
-  @media (max-width: 75em) {
+  &__button {
+    display: inline-block;
     font-size: 2.2rem;
     line-height: 2.6rem;
-    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    align-self: stretch;
+    padding: 0 2rem;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+
+    margin-left: 1.5rem;
+
+    @media (max-width: 62.5em) {
+      margin-left: 1rem;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 53.125em) {
+      margin-left: 2rem;
+      padding: 0 3rem;
+    }
+
+    @media (max-width: 37.5em) {
+      font-size: 1.8rem;
+      margin-left: 1rem;
+      padding: 0 1rem;
+    }
+  }
+
+  &__para {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: red;
+
+    @media (max-width: 75em) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__input {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (max-width: 93.75em) {
+      width: 100%;
+    }
+
+    & input {
+      display: inline-block;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid #000000;
+      background-color: #ffffff;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      width: 100%;
+
+      @media (max-width: 75em) {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding: 0.75rem 1rem;
+      }
+
+      @media (max-width: 25em) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+    }
   }
 }
 
@@ -63,7 +118,8 @@ input.invalid {
   border: 1px solid red;
 }
 
-.input p {
+.hidden {
+  visibility: hidden;
   font-size: 1.8rem;
   line-height: 2.2rem;
   text-align: center;
@@ -73,10 +129,6 @@ input.invalid {
     font-size: 1.6rem;
     line-height: 2rem;
   }
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .error-wrapper {
@@ -91,11 +143,17 @@ input.invalid {
   font-size: 2.6rem;
   line-height: 3rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 
-  @media (max-width: 25em) {
+  @media (max-width: 46.625em) {
     font-size: 2.4rem;
     line-height: 2.8rem;
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 25em) {
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
 }
 
@@ -113,10 +171,14 @@ input.invalid {
 
   margin-bottom: 1.5rem;
 
-  @media (max-width: 25em) {
+  @media (max-width: 46.625em) {
     font-size: 1.8rem;
     line-height: 2rem;
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 25em) {
+    font-size: 1.6rem;
   }
 }
 .error-btn:hover {
