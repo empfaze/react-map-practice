@@ -46,6 +46,7 @@
     align-self: stretch;
     padding: 0 2rem;
     border: none;
+    border-radius: 5px;
     background-color: #000000;
     color: #ffffff;
     cursor: pointer;
@@ -96,6 +97,7 @@
       line-height: 2.6rem;
       padding: 1rem 1.5rem;
       border: 1px solid #000000;
+      border-radius: 5px;
       background-color: #ffffff;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
       width: 100%;
@@ -151,7 +153,7 @@ input.invalid {
     margin-bottom: 1rem;
   }
 
-  @media (max-width: 25em) {
+  @media (max-width: 40.625em) {
     font-size: 2rem;
     line-height: 2.4rem;
   }
@@ -171,8 +173,8 @@ input.invalid {
 
   margin-bottom: 1.5rem;
 
-  @media (max-width: 46.625em) {
-    font-size: 1.8rem;
+  @media (max-width: 40.625em) {
+    font-size: 1.7rem;
     line-height: 2rem;
     margin-bottom: 1rem;
   }

@@ -30,6 +30,10 @@
       font-size: 3.6rem;
       margin-bottom: 1rem;
     }
+
+    @media (max-width: 22.5em) {
+      font-size: 3.2rem;
+    }
   }
 
   @media (max-width: 31.25em) {
