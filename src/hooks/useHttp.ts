@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { API_KEY } from "../types/adress";
 
 const useHttp = function (handleData: (str: string, query: string) => void) {
   const [error, setError] = useState<string | null>(null);
@@ -11,7 +10,7 @@ const useHttp = function (handleData: (str: string, query: string) => void) {
 
     try {
       const response = await fetch(
-        `https://geocode-maps.yandex.ru/1.x/?apikey=${API_KEY}&format=json&geocode=${query}`
+        `https://geocode-maps.yandex.ru/1.x/?apikey=${process.env.REACT_APP_API_KEY}&format=json&geocode=${query}`
       );
       const data = await response.json();
       const { pos } =

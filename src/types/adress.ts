@@ -25,5 +25,3 @@ export interface AdressState {
   places: IPlace[];
   draggedPlaceID: number | null;
 }
-
-export const API_KEY = "bbe0daff-f71f-462c-a067-4eaa9c595fd8";
