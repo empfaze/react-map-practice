@@ -12,7 +12,7 @@ const useInput = function (checkValidity: (str: string) => boolean) {
   ): IAdress {
     switch (action.type) {
       case ActionTypes.CHANGE:
-        return { value: action.payload!, isTouched: state.isTouched };
+        return { value: action.payload!, isTouched: true };
       case ActionTypes.BLUR:
         return { value: state.value, isTouched: true };
       case ActionTypes.RESET:

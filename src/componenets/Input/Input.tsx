@@ -7,7 +7,7 @@ import Spinner from "../Spinner/Spinner";
 import classes from "./Input.module.scss";
 
 function checkValidity(str: string): boolean {
-  return str.length > 0;
+  return str.trim().length > 0 && !str.includes(">") && !str.includes("<");
 }
 
 const InputAdress: FC = () => {
